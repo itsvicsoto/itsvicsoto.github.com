@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+
+
+<div class="home">
+
+  <div class="latest-lists grid">
+
+    <div class="grid__item  desk-three-twelfths">
+      <h1 class="latest-lists__heading">Latest Articles</h1>
+    </div>
+
+    <div class="[ latest-lists__posts-container ] [ grid__item desk-eight-twelfths ]">
+      <ul class="latest-lists__posts">
+        {% for post in site.posts %}
+        <li class="latest-lists__items">
+          <span class="meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+          <h2>
+            <a class="link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h2>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+  </div>
+
+
+  <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->
+
+</div>
