@@ -5857,9 +5857,9 @@ html.flexbox {
 /**
  * She’s all yours, cap’n... Begin importing your stuff here.
  */
-/* line 1, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/layout/_post.scss */
-.post {
-  padding: 50px 0; }
+/* line 4, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/layout/_post.scss */
+.post--content {
+  padding-top: 30px; }
 
 /* ==========================================================================
    Quick Vars
@@ -5901,6 +5901,400 @@ h5,
 h6 {
   font-weight: 300; }
 
+/* Solarized Dark
+
+For use with Jekyll and Pygments
+
+http://ethanschoonover.com/solarized
+
+SOLARIZED HEX      ROLE
+--------- -------- ------------------------------------------
+base03    #002b36  background
+base01    #586e75  comments / secondary content
+base1     #93a1a1  body text / default code / primary content
+orange    #cb4b16  constants
+red       #dc322f  regex, special keywords
+blue      #268bd2  reserved keywords
+cyan      #2aa198  strings, numbers
+green     #859900  operators, other keywords
+*/
+/* line 19, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight {
+  background-color: #002b36;
+  color: #93a1a1; }
+
+/* line 20, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .c {
+  color: #586e75; }
+
+/* Comment */
+/* line 21, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .err {
+  color: #93a1a1; }
+
+/* Error */
+/* line 22, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .g {
+  color: #93a1a1; }
+
+/* Generic */
+/* line 23, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .k {
+  color: #859900; }
+
+/* Keyword */
+/* line 24, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .l {
+  color: #93a1a1; }
+
+/* Literal */
+/* line 25, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .n {
+  color: #93a1a1; }
+
+/* Name */
+/* line 26, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .o {
+  color: #859900; }
+
+/* Operator */
+/* line 27, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .x {
+  color: #cb4b16; }
+
+/* Other */
+/* line 28, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .p {
+  color: #93a1a1; }
+
+/* Punctuation */
+/* line 29, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .cm {
+  color: #586e75; }
+
+/* Comment.Multiline */
+/* line 30, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .cp {
+  color: #859900; }
+
+/* Comment.Preproc */
+/* line 31, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .c1 {
+  color: #586e75; }
+
+/* Comment.Single */
+/* line 32, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .cs {
+  color: #859900; }
+
+/* Comment.Special */
+/* line 33, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .gd {
+  color: #2aa198; }
+
+/* Generic.Deleted */
+/* line 34, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .ge {
+  color: #93a1a1;
+  font-style: italic; }
+
+/* Generic.Emph */
+/* line 35, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .gr {
+  color: #dc322f; }
+
+/* Generic.Error */
+/* line 36, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .gh {
+  color: #cb4b16; }
+
+/* Generic.Heading */
+/* line 37, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .gi {
+  color: #859900; }
+
+/* Generic.Inserted */
+/* line 38, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .go {
+  color: #93a1a1; }
+
+/* Generic.Output */
+/* line 39, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .gp {
+  color: #93a1a1; }
+
+/* Generic.Prompt */
+/* line 40, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .gs {
+  color: #93a1a1;
+  font-weight: bold; }
+
+/* Generic.Strong */
+/* line 41, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .gu {
+  color: #cb4b16; }
+
+/* Generic.Subheading */
+/* line 42, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .gt {
+  color: #93a1a1; }
+
+/* Generic.Traceback */
+/* line 43, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .kc {
+  color: #cb4b16; }
+
+/* Keyword.Constant */
+/* line 44, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .kd {
+  color: #268bd2; }
+
+/* Keyword.Declaration */
+/* line 45, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .kn {
+  color: #859900; }
+
+/* Keyword.Namespace */
+/* line 46, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .kp {
+  color: #859900; }
+
+/* Keyword.Pseudo */
+/* line 47, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .kr {
+  color: #268bd2; }
+
+/* Keyword.Reserved */
+/* line 48, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .kt {
+  color: #dc322f; }
+
+/* Keyword.Type */
+/* line 49, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .ld {
+  color: #93a1a1; }
+
+/* Literal.Date */
+/* line 50, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .m {
+  color: #2aa198; }
+
+/* Literal.Number */
+/* line 51, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .s {
+  color: #2aa198; }
+
+/* Literal.String */
+/* line 52, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .na {
+  color: #93a1a1; }
+
+/* Name.Attribute */
+/* line 53, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .nb {
+  color: #b58900; }
+
+/* Name.Builtin */
+/* line 54, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .nc {
+  color: #268bd2; }
+
+/* Name.Class */
+/* line 55, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .no {
+  color: #cb4b16; }
+
+/* Name.Constant */
+/* line 56, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .nd {
+  color: #268bd2; }
+
+/* Name.Decorator */
+/* line 57, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .ni {
+  color: #cb4b16; }
+
+/* Name.Entity */
+/* line 58, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .ne {
+  color: #cb4b16; }
+
+/* Name.Exception */
+/* line 59, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .nf {
+  color: #268bd2; }
+
+/* Name.Function */
+/* line 60, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .nl {
+  color: #93a1a1; }
+
+/* Name.Label */
+/* line 61, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .nn {
+  color: #93a1a1; }
+
+/* Name.Namespace */
+/* line 62, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .nx {
+  color: #93a1a1; }
+
+/* Name.Other */
+/* line 63, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .py {
+  color: #93a1a1; }
+
+/* Name.Property */
+/* line 64, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .nt {
+  color: #268bd2; }
+
+/* Name.Tag */
+/* line 65, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .nv {
+  color: #268bd2; }
+
+/* Name.Variable */
+/* line 66, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .ow {
+  color: #859900; }
+
+/* Operator.Word */
+/* line 67, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .w {
+  color: #93a1a1; }
+
+/* Text.Whitespace */
+/* line 68, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .mf {
+  color: #2aa198; }
+
+/* Literal.Number.Float */
+/* line 69, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .mh {
+  color: #2aa198; }
+
+/* Literal.Number.Hex */
+/* line 70, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .mi {
+  color: #2aa198; }
+
+/* Literal.Number.Integer */
+/* line 71, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .mo {
+  color: #2aa198; }
+
+/* Literal.Number.Oct */
+/* line 72, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .sb {
+  color: #586e75; }
+
+/* Literal.String.Backtick */
+/* line 73, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .sc {
+  color: #2aa198; }
+
+/* Literal.String.Char */
+/* line 74, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .sd {
+  color: #93a1a1; }
+
+/* Literal.String.Doc */
+/* line 75, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .s2 {
+  color: #2aa198; }
+
+/* Literal.String.Double */
+/* line 76, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .se {
+  color: #cb4b16; }
+
+/* Literal.String.Escape */
+/* line 77, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .sh {
+  color: #93a1a1; }
+
+/* Literal.String.Heredoc */
+/* line 78, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .si {
+  color: #2aa198; }
+
+/* Literal.String.Interpol */
+/* line 79, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .sx {
+  color: #2aa198; }
+
+/* Literal.String.Other */
+/* line 80, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .sr {
+  color: #dc322f; }
+
+/* Literal.String.Regex */
+/* line 81, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .s1 {
+  color: #2aa198; }
+
+/* Literal.String.Single */
+/* line 82, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .ss {
+  color: #2aa198; }
+
+/* Literal.String.Symbol */
+/* line 83, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .bp {
+  color: #268bd2; }
+
+/* Name.Builtin.Pseudo */
+/* line 84, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .vc {
+  color: #268bd2; }
+
+/* Name.Variable.Class */
+/* line 85, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .vg {
+  color: #268bd2; }
+
+/* Name.Variable.Global */
+/* line 86, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .vi {
+  color: #268bd2; }
+
+/* Name.Variable.Instance */
+/* line 87, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .il {
+  color: #2aa198; }
+
+/* Literal.Number.Integer.Long */
+/* line 90, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight {
+  border-radius: 10px; }
+
+/* line 94, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight > pre {
+  overflow: auto;
+  padding: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  word-wrap: break-word;
+  max-height: 300px; }
+
+/* Make line numbers unselectable: excludes line numbers from copy-paste user ops */
+/* line 104, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.highlight .lineno {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none; }
+
+/* line 105, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.lineno::-moz-selection {
+  background-color: transparent; }
+
+/* Mozilla specific */
+/* line 106, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_syntax.scss */
+.lineno::selection {
+  background-color: transparent; }
+
+/* Other major browsers */
 /*------------------------------------*\
     #hs-color-love
 \*------------------------------------*/

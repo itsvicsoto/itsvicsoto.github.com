@@ -1,15 +1,53 @@
 ---
 layout: default
 ---
-<div class="post wrapper">
+<div class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-  </header>
+  <div class="section-header">
+    <div class="wrapper grid">
 
-  <article class="post-content">
-    {{ content }}
+      <div class="[ section-header__sidemenu ] [ grid__item  desk-two-twelfths ]">
+        <ul>
+          <li>
+            <span class="highlight">Looking for me?</span>
+          </li>
+          <li>
+            <a href="mailto:itsvicsoto@gmail.com?Subject=Hello%20Vic!" target="_top">
+              itsvicsoto@gmail.com
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/itsvicsoto">
+              Github
+            </a>
+          </li>
+          <li>
+            <a href="http://facebook.com/vicsoto16">
+              Facebook
+            </a>
+          </li>
+          <li>
+            <a href="http://instagram.com/vicsoto16">
+              Instagram
+            </a>
+          </li>
+        </ul>
+      </div><!--
+
+       --><div class="[ grid__item desk-ten-twelfths ]">
+        <h1 class="section-header__title">
+          {{ page.title }}
+          <!-- <small>{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</small> -->
+        </h1>
+      </div>
+
+    </div>
+  </div>
+
+  <article class="[ post--content ] [ wrapper grid ]">
+    <div class="[ grid__item push--desk-two-twelfths desk-ten-twelfths ]">
+        {{ content }}
+    </div>
   </article>
 
 </div>
