@@ -6,20 +6,87 @@ layout: default
 
 <div class="home">
 
-  <div class="latest-lists grid">
+  <div class="section-header">
+    <div class="wrapper grid">
+      <div class="[ grid__item push--desk-two-twelfths desk-ten-twelfths ]">
+        <h1 class="section-header__title">
+          Latest Articles
+        </h1>
+      </div>
+    </div>
+  </div>
 
-    <div class="grid__item  desk-three-twelfths">
-      <h1 class="latest-lists__heading">Latest Articles</h1>
+  <div class="wrapper latest-lists grid">
+
+    <div class="[ latest-lists__posts-container ] [ grid__item push--desk-two-twelfths desk-ten-twelfths ]">
+      <ul class="latest-lists__posts">
+        {% for article in site.categories.articles %}
+        <li class="latest-lists__items">
+          <!-- <span class="meta">{{ post.date | date: "%b %-d, %Y" }}</span> -->
+          <h2 class="title">
+            <a class="link" href="{{ article.url | prepend: site.baseurl }}">{{ article.title }}</a>
+          </h2>
+          <p>Case read they must it of cold that. Speaking trifling an to unpacked moderate debating learning. An particular contrasted he excellence favourable on. Nay preference dispatched difficulty continuing joy one. Songs it be if ought hoped of. Too carriage attended him entrance desirous the saw. Twenty sister hearts garden limits put gay has. We hill lady will both sang room by.</p>
+          <a href="{{ article.url | prepend: site.baseurl }}">Continue Reading...</a>
+        </li>
+        {% endfor %}
+      </ul>
     </div>
 
-    <div class="[ latest-lists__posts-container ] [ grid__item desk-eight-twelfths ]">
+  </div>
+
+  <div class="section-header">
+    <div class="wrapper grid">
+
+      <div class="[ section-header__sidemenu ] [ grid__item  desk-two-twelfths ]">
+        <ul>
+          <li>
+            <span class="highlight">Looking for me?</span>
+          </li>
+          <li>
+            <a href="mailto:itsvicsoto@gmail.com?Subject=Hello%20Vic!" target="_top">
+              itsvicsoto@gmail.com
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/itsvicsoto">
+              Github
+            </a>
+          </li>
+          <li>
+            <a href="http://facebook.com/vicsoto16">
+              Facebook
+            </a>
+          </li>
+          <li>
+            <a href="http://instagram.com/vicsoto16">
+              Instagram
+            </a>
+          </li>
+        </ul>
+      </div><!--
+
+       --><div class="[ grid__item desk-ten-twelfths ]">
+        <h1 class="section-header__title">
+          Case Study & Projects
+        </h1>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="wrapper latest-lists grid">
+
+    <div class="[ latest-lists__posts-container ] [ grid__item push--desk-two-twelfths desk-ten-twelfths ]">
       <ul class="latest-lists__posts">
-        {% for post in site.posts %}
+        {% for article in site.categories.articles %}
         <li class="latest-lists__items">
-          <span class="meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-          <h2>
-            <a class="link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          <!-- <span class="meta">{{ post.date | date: "%b %-d, %Y" }}</span> -->
+          <h2 class="title">
+            <a class="link" href="{{ article.url | prepend: site.baseurl }}">{{ article.title }}</a>
           </h2>
+          <p>Case read they must it of cold that. Speaking trifling an to unpacked moderate debating learning. An particular contrasted he excellence favourable on. Nay preference dispatched difficulty continuing joy one. Songs it be if ought hoped of. Too carriage attended him entrance desirous the saw. Twenty sister hearts garden limits put gay has. We hill lady will both sang room by.</p>
+          <a href="{{ article.url | prepend: site.baseurl }}">Continue Reading...</a>
         </li>
         {% endfor %}
       </ul>
