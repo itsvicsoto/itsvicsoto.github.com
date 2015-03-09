@@ -7,6 +7,17 @@ description: "I built this website to serve as my personal playground for develo
              This will also serve as my blog and repository for all the notes/cheatsheets I do during my development.
              I will be constantly keep this up to date for myself and for all who wanted to contribute to my docs.
              Have fun! If it’s good enough to be a reference I totally approve of it!"
+metalinks:
+    - main-label: "Links"
+      child-links:
+        - name: "Github"
+          link: "https://github.com/itsvicsoto/itsvicsoto.github.com"
+        - name: "View Website"
+          link: "http://itsvicsoto.github.io"
+    - main-label: "Inspiration"
+      child-links:
+        - name: "CSSWizardry"
+          link: "http://csswizardry.com"
 ---
 
 ### Welcome to my website!
@@ -43,24 +54,7 @@ I built this to run on NodeJS (when i decided to move it out of git pages) but f
 * CSSWizardry
 * SMACSS
 
-#### Code Snippet Sample
-{% highlight js linenos %}
-var days = new Array('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday');
 
-var months = new Array('January','February','March','April','May','June','July','August','September','October','November','December');
-
-var date = ((now.getDate()<10) ? "0" : "")+ now.getDate();
-
-function fourdigits(number) {
-    return (number < 1000) ? number + 1900 : number;
-                                }
-today =  days[now.getDay()] + ", " +
-         months[now.getMonth()] + " " +
-         date + ", " +
-         (fourdigits(now.getYear())) ;
-
-document.write(today);
-{% endhighlight %}
 
 Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
 

@@ -6,31 +6,27 @@ layout: default
   <div class="section-header">
     <div class="wrapper grid">
 
-      <div class="[ section-header__sidemenu ] [ grid__item  desk-two-twelfths ]">
+      <div class="[ section-header__sidemenu ] [ grid__item  desk-two-twelfths visuallyhidden--lap visuallyhidden--palm ] ">
         <ul>
+
+          {% for link in page.metalinks %}
           <li>
-            <span class="highlight">Looking for me?</span>
+            <span class="highlight">
+              {{ link.main-label }}
+            </span>
+
           </li>
+
+          {% for childLink in link.child-links %}
           <li>
-            <a href="mailto:itsvicsoto@gmail.com?Subject=Hello%20Vic!" target="_top">
-              itsvicsoto@gmail.com
+            <a href="{{ childLink.link }}" class="highlight">
+            {{ childLink.name }}
             </a>
           </li>
-          <li>
-            <a href="https://github.com/itsvicsoto">
-              Github
-            </a>
-          </li>
-          <li>
-            <a href="http://facebook.com/vicsoto16">
-              Facebook
-            </a>
-          </li>
-          <li>
-            <a href="http://instagram.com/vicsoto16">
-              Instagram
-            </a>
-          </li>
+          {% endfor %}
+
+          {% endfor %}
+
         </ul>
       </div><!--
 

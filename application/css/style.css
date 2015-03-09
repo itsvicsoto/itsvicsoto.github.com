@@ -6339,7 +6339,13 @@ green     #859900  operators, other keywords
   .section-header__sidemenu > ul > li > a {
     color: #fff;
     font-weight: bold; }
-  /* line 45, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_section-header.scss */
+    /* line 46, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_section-header.scss */
+    .section-header__sidemenu > ul > li > a > i:before {
+      width: 16px;
+      margin: 0;
+      padding: 0;
+      text-align: center; }
+  /* line 57, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/base/_section-header.scss */
   .section-header__sidemenu span.highlight {
     color: #ff5289;
     font-weight: normal;
@@ -6377,15 +6383,25 @@ green     #859900  operators, other keywords
   padding: 20px 20px 1px 20px;
   margin-top: 100px;
   text-align: center; }
+  @media only screen and (min-width: 481px) and (max-width: 1023px) {
+    /* line 31, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/_header.scss */
+    .page-header__centerfold {
+      padding: 0;
+      margin: 30px auto; } }
+  @media only screen and (max-width: 480px) {
+    /* line 31, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/_header.scss */
+    .page-header__centerfold {
+      padding: 0;
+      margin: 30px auto; } }
 
-/* line 37, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/_header.scss */
+/* line 48, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/_header.scss */
 .page-header__centerfold-inner {
   display: inline-block; }
-  /* line 40, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/_header.scss */
+  /* line 51, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/_header.scss */
   .page-header__centerfold-inner > h1 {
     margin: 0; }
 
-/* line 46, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/_header.scss */
+/* line 57, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/_header.scss */
 .page-header__centerfold__shortdesc {
   padding: 5px 10px;
   border-bottom: 2px solid #262626;
@@ -6396,7 +6412,7 @@ green     #859900  operators, other keywords
 /*------------------------------------*\
     #PAGE-NAV
 \*------------------------------------*/
-/* line 67, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/_header.scss */
+/* line 78, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/_header.scss */
 .page-nav__logo {
   display: block;
   float: left;
@@ -6408,19 +6424,19 @@ green     #859900  operators, other keywords
   background: #7B7B7B;
   color: #fff; }
 
-/* line 79, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/_header.scss */
+/* line 90, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/_header.scss */
 .page-nav__linklist {
   display: none;
   color: #7B7B7B; }
   @media only screen and (min-width: 481px) {
-    /* line 79, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/_header.scss */
+    /* line 90, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/_header.scss */
     .page-nav__linklist {
       display: block; } }
 
-/* line 89, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/_header.scss */
+/* line 100, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/_header.scss */
 .page-nav__linkitem {
   padding: 20px; }
-  /* line 92, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/_header.scss */
+  /* line 103, ../../source/itsvicssx/scss-inuitcss/ui-itsvicsoto/_header.scss */
   .page-nav__linkitem:last-child {
     padding-right: 0; }
 

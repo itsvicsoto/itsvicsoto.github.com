@@ -7,6 +7,11 @@ description: "I built this website to serve as my personal playground for develo
              This will also serve as my blog and repository for all the notes/cheatsheets I do during my development.
              I will be constantly keep this up to date for myself and for all who wanted to contribute to my docs.
              Have fun! If it’s good enough to be a reference I totally approve of it!"
+metalinks:
+    - main-label: "Links"
+      child-links:
+        - name: "Gist"
+          link: "https://gist.github.com/itsvicsoto"
 ---
 
 ### Welcome to my hackerrrry page!
