@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="/css/style.css">
   <link href='http://fonts.googleapis.com/css?family=Roboto:900,500,900italic,400italic,100,700italic,300,700,500italic,100italic,300italic,400' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  <link rel="canonical" href="http://yourdomain.com/">
+  <link rel="canonical" href="http://yourdomain.com/cheatsheets/jquery/">
   <link rel="alternate" type="application/rss+xml" title="Your awesome title" href="http://yourdomain.com/feed.xml" />
 </head>
 
@@ -55,98 +55,17 @@
 
 
     <div class="page-content">
-        <div class="home">
+        <div class="wrapper">
+    <h1 id="cheatsheet-jquery">[cheatsheet] jQuery</h1>
 
-  <div class="section-header">
-    <div class="wrapper grid">
-      <div class="[ grid__item push--desk-two-twelfths desk-ten-twelfths ]">
-        <h1 class="section-header__title">
-          Latest Articles
-        </h1>
-      </div>
-    </div>
-  </div>
+<h4 id="iterating-something">Iterating something</h4>
 
-  <div class="wrapper latest-lists grid">
-
-    <div class="[ latest-lists__posts-container ] [ grid__item push--desk-two-twelfths desk-ten-twelfths ]">
-      <ul class="latest-lists__posts">
-        
-        <li class="latest-lists__items">
-          <!-- <span class="meta"></span> -->
-          <h2 class="title">
-            <a class="link" href="/articles/2015/01/10/installation-guide/">Installation Guide</a>
-          </h2>
-          <p>I built this website to serve as my personal playground for developing my front-end skills. This will also serve as my blog and repository for all the notes/cheatsheets I do during my development. I will be constantly keep this up to date for myself and for all who wanted to contribute to my docs. Have fun! If it’s good enough to be a reference I totally approve of it!</p>
-          <a href="/articles/2015/01/10/installation-guide/">Continue Reading...</a>
-        </li>
-        
-      </ul>
-    </div>
-
-  </div>
-
-  <div class="section-header">
-    <div class="wrapper grid">
-
-      <div class="[ section-header__sidemenu ] [ grid__item  desk-two-twelfths visuallyhidden--lap visuallyhidden--palm ]">
-        <ul>
-          <li>
-            <span class="highlight">Looking for me?</span>
-          </li>
-          <li>
-            <a href="mailto:itsvicsoto@gmail.com?Subject=Hello%20Vic!" target="_top">
-              itsvicsoto@gmail.com <i class="ion-ios-email"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/itsvicsoto">
-              Github <i class="ion-social-github"></i>
-            </a>
-          </li>
-          <li>
-            <a href="http://facebook.com/vicsoto16">
-              Facebook <i class="ion-social-facebook"></i>
-            </a>
-          </li>
-          <li>
-            <a href="http://instagram.com/vicsoto16">
-              Instagram <i class="ion-social-instagram"></i>
-            </a>
-          </li>
-        </ul>
-      </div><!--
-
-       --><div class="[ grid__item desk-ten-twelfths ]">
-        <h1 class="section-header__title">
-          Case Study & Projects
-        </h1>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="wrapper latest-lists grid">
-
-    <div class="[ latest-lists__posts-container ] [ grid__item push--desk-two-twelfths desk-ten-twelfths ]">
-      <ul class="latest-lists__posts">
-        
-        <li class="latest-lists__items">
-          <!-- <span class="meta"></span> -->
-          <h2 class="title">
-            <a class="link" href="/case-study-projects/2015/01/10/cheatsheets/">Cheatsheets Collection</a>
-          </h2>
-          <p>Case read they must it of cold that. Speaking trifling an to unpacked moderate debating learning. An particular contrasted he excellence favourable on. Nay preference dispatched difficulty continuing joy one. Songs it be if ought hoped of. Too carriage attended him entrance desirous the saw. Twenty sister hearts garden limits put gay has. We hill lady will both sang room by.</p>
-          <a href="/case-study-projects/2015/01/10/cheatsheets/">Continue Reading...</a>
-        </li>
-        
-      </ul>
-    </div>
-
-  </div>
-
-
-  <!-- <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p> -->
+<div class="highlight"><pre><code class="js"><span class="lineno">1</span> <span class="err">##</span> <span class="nx">Sample</span>
+<span class="lineno">2</span> 
+<span class="lineno">3</span> <span class="nx">$</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="s1">&#39;.mark-solo&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">index</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">4</span>     <span class="nx">selectedNotification</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">data</span><span class="p">(</span><span class="s1">&#39;activityId&#39;</span><span class="p">));</span>
+<span class="lineno">5</span> <span class="p">});</span>
+</code></pre></div>
 
 </div>
 
