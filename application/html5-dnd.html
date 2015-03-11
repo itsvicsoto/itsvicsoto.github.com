@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>DND</title>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:900,500,900italic,400italic,100,700italic,300,700,500italic,100italic,300italic,400'
+  rel='stylesheet' type='text/css'>
+
+  <style>
+  .sortable {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    width: 80%;
+  }
+  .sortable li.sortable-dragging {
+    opacity: .25;
+    -webkit-transition: -webkit-transform 0.2s ease-out;
+    -moz-transition: -moz-transform 0.2s ease-out;
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+  }
+  .sortable li.sortable-over {
+    opacity: .25;
+  }
+  .sortable li {
+    float: left;
+    border: 2px solid #666;
+    margin-right: 5px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: move;
+    margin-bottom: 30px;
+    padding: 0;
+    padding-bottom: 10px;
+    background-color: orange;
+  }
+  .sortable li .number {
+    height: 100px;
+    width: 100px;
+    background-color: rgba(200, 200, 200, .6);
+    line-height: 100px;
+    font-size: 60px;
+    font-family: Georgia;
+  }
+  .sortable a {
+    text-decoration: none;
+  }
+  .sortable li .header {
+    color: white;
+    height: 20px;
+    text-shadow: black 0 1px;
+    box-shadow: 5px;
+    padding: 5px;
+    background: rgba(64, 64, 128, .3);
+    border-bottom: 1px solid #DDD;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  #sortable-warp li {
+    background-color: red;
+  }
+  [draggable] {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+  [draggable] * {
+    -moz-user-drag: none;
+    -khtml-user-drag: none;
+    -webkit-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+  }
+  </style>
+</head>
+
+<body style="font-family: 'Roboto', arial; ">
+
+
+  <div style="margin: 0 auto; width: 960px;">
+
+    <h1>Html5 Drag and Drop</h1>
+
+    <p>Hello world!</p>
+
+    <div class="span6" draggable="true" data-type="Text">
+      <div class="well">
+        <p style="text-align: center;">
+          Drag Text Element
+        </p>
+      </div>
+    </div>
+    <div class="span6" draggable="true" data-type="HTML">
+      <div class="well">
+        <p style="text-align: center;">
+          Drag HTML Element
+        </p>
+      </div>
+    </div>
+
+    <iframe id="ifr" src="/html5-iframe.html" height="400" width="100%"></iframe>
+    <!-- <div class="hero-unit dropzone" data-accept-type="HTML">
+      <h1>
+          This is dockPHP Dropzone 1
+    </h1>
+      <p style="text-align:center;">
+        Only HTML Content Can be Dropped Here
+      </p>
+      <p>
+        Number of Items Dropped Here - <span id="dropzone1_count">0</span>
+      </p>
+    </div>
+    <div class="hero-unit dropzone" data-accept-type="Text">
+      <h1>
+          This is dockPHP Dropzone 2
+    </h1>
+      <p style="text-align:center;">
+        Only Text Content Can be Dropped Here
+      </p>
+      <p>
+        Number of Items Dropped Here - <span id="dropzone2_count">0</span>
+      </p>
+    </div> -->
+
+  </div>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  <script type="text/javascript" src="/js/nativesortable.js"></script>
+  <script type="text/javascript" src="/js/html5-dnd.js"></script>
+
+</body>
+
+</html>
