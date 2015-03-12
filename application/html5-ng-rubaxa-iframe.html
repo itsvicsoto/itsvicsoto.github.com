@@ -34,6 +34,7 @@
   }
   .grid,
   .grid-dropzone {
+    position: relative;
     min-height: 40px;
     padding: 30px;
     border: 1px dashed #000;
@@ -66,7 +67,10 @@
 
 <body>
 
-  <div class="grid">
+
+  <page-builder ng-model="grid" grid-parent="grid.children" grid-options="{ isGridRoot : true }" page-builder-tpl="nestable_item.html"></page-builder>
+
+  <!-- <div class="grid">
     <div ng-sortable="sortableWidget" class="clearfix">
       <span class="top-left">
         Widget DropZone
@@ -99,7 +103,44 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
+
+
+<!--  -->
+
+  <script type="text/ng-template" id="nestable_item.html">
+
+
+    <div class="grid {{ ngModelItem.class }}" >
+      <span class="top-left">
+          Grid Class: {{ ngModelItem.class }}
+      </span>
+      <div ng-sortable="sortableWidget" class="clearfix">
+        <span class="top-left">
+          WidgetZone: {{ ngModelItem.class }}
+        </span>
+        <div ng-repeat="widget in ngModelItem.widgets">
+          widget: {{ widget.name }}
+        </div>
+      </div>
+      <div ng-sortable="sortableGrid" class="clearfix">
+        <span class="top-left">
+          GridZone: {{ ngModelItem.class }}
+        </span>
+        <div ng-repeat="innerItem in ngModelItem.children">
+           <page-builder
+            grid-parent="ngModelItem.children"
+            grid-options=""
+            ng-model="innerItem"
+            page-builder-tpl="nestable_item.html">
+          </page-builder>
+        </div>
+
+      </div>
+    </div>
+
+
+  </script>
 
 </body>
 
