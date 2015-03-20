@@ -25,6 +25,8 @@ Some of them are listed here :
 
 *  [Angular](/cheatsheets/angular)
 *  [JQuery](/cheatsheets/jquery)
+*  [whatever-nix](/cheatsheets/whatever-nix)
+*  [wordpress](/cheatsheets/wordpress)
 
 
 
