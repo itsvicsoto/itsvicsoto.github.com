@@ -3,10 +3,7 @@ layout: post
 title:  "Html5 Drag and Drop"
 date:   2015-01-10 00:00:00
 categories: case-study-projects
-description: "I built this website to serve as my personal playground for developing my front-end skills.
-             This will also serve as my blog and repository for all the notes/cheatsheets I do during my development.
-             I will be constantly keep this up to date for myself and for all who wanted to contribute to my docs.
-             Have fun! If it’s good enough to be a reference I totally approve of it!"
+description: "Just a drag and drop implementation of some plugins I found. All Html5 Stuff."
 metalinks:
     - main-label: "Links"
       child-links:

@@ -3,10 +3,8 @@ layout: post
 title:  "Cheatsheets Collection"
 date:   2015-01-10 00:00:00
 categories: case-study-projects
-description: "I built this website to serve as my personal playground for developing my front-end skills.
-             This will also serve as my blog and repository for all the notes/cheatsheets I do during my development.
-             I will be constantly keep this up to date for myself and for all who wanted to contribute to my docs.
-             Have fun! If it’s good enough to be a reference I totally approve of it!"
+description: "This is my series of collections for my personal reference during the course of what I
+			  do. If you want to contribute, feel free to pull request :)."
 metalinks:
     - main-label: "Links"
       child-links:
@@ -23,10 +21,12 @@ snippets, css or even random stuff I just want to note.
 
 Some of them are listed here :
 
+*  [Inspiration](/cheatsheets/inspiration)
 *  [Angular](/cheatsheets/angular)
 *  [JQuery](/cheatsheets/jquery)
 *  [whatever-nix](/cheatsheets/whatever-nix)
 *  [wordpress](/cheatsheets/wordpress)
+*  [OSX Developer Setup](/cheatsheets/osx-developer-setup)
 
 
 
