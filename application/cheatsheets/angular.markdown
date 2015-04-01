@@ -2,7 +2,11 @@
 layout: cheatsheet
 ---
 
+http://terussell85.github.io/blog/2013/12/23/the-angularjs-promise-anti-pattern-that-makes-me-cry/
+
 # [cheatsheet] Angular 1.3.9
+
+### [Resolve Resources Centrally](http://www.jvandemo.com/how-to-resolve-application-wide-resources-centrally-in-angularjs-with-ui-router/)
 
 ### [Expressions](http://www.w3schools.com/angular/angular_expressions.asp)
 
