@@ -56,13 +56,17 @@
 
     <div class="page-content">
         <div class="wrapper">
-    <h1 id="cheatsheet-angular-139">[cheatsheet] Angular 1.3.9</h1>
+    <p>http://terussell85.github.io/blog/2013/12/23/the-angularjs-promise-anti-pattern-that-makes-me-cry/</p>
+
+<h1 id="cheatsheet-angular-139">[cheatsheet] Angular 1.3.9</h1>
+
+<h3 id="resolve-resources-centrallyhttpwwwjvandemocomhow-to-resolve-application-wide-resources-centrally-in-angularjs-with-ui-router"><a href="http://www.jvandemo.com/how-to-resolve-application-wide-resources-centrally-in-angularjs-with-ui-router/">Resolve Resources Centrally</a></h3>
 
 <h3 id="expressionshttpwwww3schoolscomangularangularexpressionsasp"><a href="http://www.w3schools.com/angular/angular_expressions.asp">Expressions</a></h3>
 
 <h4 id="component-based-directiveshttpswwwairpaircomangularjspostscomponent-based-angularjs-directives4-refactoring-components"><a href="https://www.airpair.com/angularjs/posts/component-based-angularjs-directives#4-refactoring-components">Component Based Directives</a></h4>
 
-<div class="highlight"><pre><code class="js"><span class="lineno"> 1</span>   <span class="p">;</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="lineno"> 1</span> <span class="p">;</span>
 <span class="lineno"> 2</span> <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
 <span class="lineno"> 3</span>   <span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
 <span class="lineno"> 4</span> 
@@ -90,21 +94,19 @@
 <span class="lineno">26</span>       <span class="p">}</span>
 <span class="lineno">27</span>     <span class="p">}</span>
 <span class="lineno">28</span>   <span class="p">])</span>
-<span class="lineno">29</span> <span class="p">}());</span>
-</code></pre></div>
+<span class="lineno">29</span> <span class="p">}());</span></code></pre></div>
 
 <h4 id="factory-patternshttpstackoverflowcomquestions14056874how-to-emit-events-from-a-factory"><a href="http://stackoverflow.com/questions/14056874/how-to-emit-events-from-a-factory">Factory Patterns</a></h4>
 
-<div class="highlight"><pre><code class="js"><span class="lineno">1</span> <span class="nx">myApp</span><span class="p">.</span><span class="nx">factory</span><span class="p">(</span><span class="s1">&#39;myFactory&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;$rootScope&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">$rootScope</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="lineno">1</span> <span class="nx">myApp</span><span class="p">.</span><span class="nx">factory</span><span class="p">(</span><span class="s1">&#39;myFactory&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;$rootScope&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">$rootScope</span><span class="p">)</span> <span class="p">{</span>
 <span class="lineno">2</span>     <span class="nx">$rootScope</span><span class="p">.</span><span class="nx">$emit</span><span class="p">(</span><span class="s2">&quot;myEvent&quot;</span><span class="p">,</span> <span class="nx">myEventParams</span><span class="p">);</span>
-<span class="lineno">3</span> <span class="p">}]);</span>
-</code></pre></div>
+<span class="lineno">3</span> <span class="p">}]);</span></code></pre></div>
 
 <h4 id="ng-repeat">ng-repeat</h4>
 
 <p>ng-repeat that will display loading or if empty set of data.</p>
 
-<div class="highlight"><pre><code class="js"><span class="lineno"> 1</span> <span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="lineno"> 1</span> <span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span>
 <span class="lineno"> 2</span>   <span class="o">&lt;</span><span class="nx">li</span> <span class="nx">ng</span><span class="o">-</span><span class="k">if</span><span class="o">=</span><span class="s2">&quot;outstanding == undefined&quot;</span><span class="o">&gt;</span>
 <span class="lineno"> 3</span>     <span class="o">&lt;</span><span class="nx">i</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;fa fa-refresh fa-spin&quot;</span><span class="o">&gt;&lt;</span><span class="err">/i&gt; Loading...</span>
 <span class="lineno"> 4</span>   <span class="o">&lt;</span><span class="err">/li&gt;</span>
@@ -125,8 +127,8 @@
 <span class="lineno">19</span>       <span class="o">&lt;</span><span class="err">/button&gt;</span>
 <span class="lineno">20</span>     <span class="o">&lt;</span><span class="err">/div&gt;</span>
 <span class="lineno">21</span>   <span class="o">&lt;</span><span class="err">/li&gt;</span>
-<span class="lineno">22</span> <span class="o">&lt;</span><span class="err">/ul&gt;</span>
-</code></pre></div>
+<span class="lineno">22</span> <span class="o">&lt;</span><span class="err">/ul&gt;</span></code></pre></div>
+
 
 </div>
 
