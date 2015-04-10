@@ -30,6 +30,22 @@ layout: cheatsheet
 {% endhighlight %}
 
 
+#### Config
+
+{% highlight bash %}
+
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa_your_key_github
+
+Host bitbucket.org
+  HostName bitbucket.org
+  User git
+  IdentityFile ~/.ssh/id_rsa_your_key_bitbucket
+
+{% endhighlight %}
+
 #### [Installation of NodeJs Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-an-ubuntu-14-04-server)
 
 
