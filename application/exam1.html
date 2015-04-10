@@ -4,7 +4,6 @@ layout: exam1
 
 <div class="header">BETICA SHOP</div>
 <div class="content">
-  <h1>Phones</h1>
   <div class="[ js-content ]"></div>
 </div>
 <div class="footer">COPYRIGHT 2014</div>
@@ -14,7 +13,6 @@ layout: exam1
   function Phones(phones) {
     // get the node for phones.
     this.items = phones.items;
-    this.phones = phones.items.phones;
     this.currency = '$';
   }
 
@@ -35,24 +33,30 @@ layout: exam1
     //     <span class="list__price">$1,000</span>
     //   </button>
     // </li>
-    function drawPhoneItem(element, options) {
+    function drawItem(itemList, options) {
+      var itemHtml = '';
 
-      var itemHtml = ['<li class="list__item">',
-                        '<div class="list__title">',
-                          '<a class="list__title-link">',
-                            element.product,
-                          '</a>',
-                        '</div>',
-                        '<p class="list__description"',
-                          'Manufactured by <strong>' + element.manufacturer,
-                          ' to be released in <strong>' + element.releaseDate,
-                          '</strong>',
-                        '</p>',
-                        '<button type="button" class="list__button">',
-                          '<span class="list__price">' + options.currency,
-                          + ' ' + element.price + '</span>',
-                        '</button>',
-                      '</li>'].join('');
+
+      itemList.forEach(function(element, index, array) {
+
+        itemHtml += ['<li class="list__item">',
+                      '<div class="list__title">',
+                        '<a class="list__title-link">',
+                          element.product,
+                        '</a>',
+                      '</div>',
+                      '<p class="list__description"',
+                        'Manufactured by <strong>' + element.manufacturer,
+                        ' to be released in <strong>' + element.releaseDate,
+                        '</strong>',
+                      '</p>',
+                      '<button type="button" class="list__button">',
+                        '<span class="list__price">' + options.currency,
+                        + ' ' + element.price + '</span>',
+                      '</button>',
+                    '</li>'].join('');
+
+      })
 
       return itemHtml;
 
@@ -62,19 +66,20 @@ layout: exam1
     // <ul class="list">
     //   // drawPhoneItem()
     // </ul>
-    function drawPhoneList(phones, options) {
-        var phonesListHtml = '';
+    function drawList(items, options) {
+        var listHtml = '';
         var itemsHtml = '';
 
-        phones.forEach(function (phone, index, array) {
-          itemsHtml += drawPhoneItem(phone, options);
+        $.each(items, function (key, itemList) {
+          itemsHtml += drawItem(itemList, options);
+
+          listHtml += ['<h1 class="uppercase">' + key + '</h1>',
+                       '<ul class="list">',
+                        itemsHtml,
+                       '</ul>'].join('');
         })
 
-        phonesListHtml = ['<ul class="list">',
-                          itemsHtml,
-                         '</ul>'].join('');
-
-        return phonesListHtml;
+        return listHtml;
 
     }
 
@@ -85,12 +90,12 @@ layout: exam1
        * @return {[null]}
        */
       render: function(selector) {
-        var phones = this.phones;
+        var items = this.items;
         var options = {
           currency : this.currency
         }
 
-        $(selector).html(drawPhoneList(phones, options));
+        $(selector).html(drawList(items, options));
       }
     }
 

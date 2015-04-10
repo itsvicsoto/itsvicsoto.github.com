@@ -23,7 +23,11 @@ html, body {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 200; }
 
-/* line 39, ../../source/itsvicssx/scss-inuitcss/exam1.scss */
+/* line 38, ../../source/itsvicssx/scss-inuitcss/exam1.scss */
+.uppercase {
+  text-transform: uppercase; }
+
+/* line 43, ../../source/itsvicssx/scss-inuitcss/exam1.scss */
 .btn, .btn-primary, .list__button {
   padding: 8px 15px;
   font-size: 100%;
@@ -36,17 +40,17 @@ h1, h2, h3, h4, h5, h6 {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
 
-/* line 49, ../../source/itsvicssx/scss-inuitcss/exam1.scss */
+/* line 53, ../../source/itsvicssx/scss-inuitcss/exam1.scss */
 .btn-primary, .list__button {
   background: #534a93; }
-  /* line 53, ../../source/itsvicssx/scss-inuitcss/exam1.scss */
+  /* line 57, ../../source/itsvicssx/scss-inuitcss/exam1.scss */
   .btn-primary:hover, .list__button:hover {
     background: #79589f; }
 
 /*------------------------------------*\
     LAYOUT #HEADER
 \*------------------------------------*/
-/* line 66, ../../source/itsvicssx/scss-inuitcss/exam1.scss */
+/* line 70, ../../source/itsvicssx/scss-inuitcss/exam1.scss */
 .header {
   padding: 20px;
   text-align: center;
@@ -56,7 +60,7 @@ h1, h2, h3, h4, h5, h6 {
 /*------------------------------------*\
     LAYOUT #CONTENT
 \*------------------------------------*/
-/* line 79, ../../source/itsvicssx/scss-inuitcss/exam1.scss */
+/* line 83, ../../source/itsvicssx/scss-inuitcss/exam1.scss */
 .content {
   padding: 0 20px;
   text-align: center; }
@@ -64,7 +68,7 @@ h1, h2, h3, h4, h5, h6 {
 /*------------------------------------*\
     LAYOUT #FOOTER
 \*------------------------------------*/
-/* line 90, ../../source/itsvicssx/scss-inuitcss/exam1.scss */
+/* line 94, ../../source/itsvicssx/scss-inuitcss/exam1.scss */
 .footer {
   position: fixed;
   left: 0;
@@ -78,20 +82,20 @@ h1, h2, h3, h4, h5, h6 {
 /*------------------------------------*\
     UI-COMPONENT #list
 \*------------------------------------*/
-/* line 107, ../../source/itsvicssx/scss-inuitcss/exam1.scss */
+/* line 111, ../../source/itsvicssx/scss-inuitcss/exam1.scss */
 .list {
   list-style: none;
   padding: 0;
   margin: 0; }
 
-/* line 113, ../../source/itsvicssx/scss-inuitcss/exam1.scss */
+/* line 117, ../../source/itsvicssx/scss-inuitcss/exam1.scss */
 .list__item {
   padding: 0 0 10px 0;
   border: 1px solid #79589f;
   border-radius: 5px;
   margin-bottom: 20px; }
 
-/* line 120, ../../source/itsvicssx/scss-inuitcss/exam1.scss */
+/* line 124, ../../source/itsvicssx/scss-inuitcss/exam1.scss */
 .list__title {
   padding: 10px;
   background: #534a93;
