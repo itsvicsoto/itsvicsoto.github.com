@@ -10,9 +10,9 @@ layout: exam1
 
 <script type="text/javascript">
 
-  function ItemList(phones) {
-    // get the node for phones.
-    this.items = phones.items;
+  function ItemList(resource) {
+    // get item nodes
+    this.items = resource.items;
     this.currency = '$';
   }
 
@@ -106,7 +106,7 @@ layout: exam1
   $(document).ready(function() {
 
     // Initialise Data
-    var items = {
+    var resource = {
       "items": {
         "phones": [{
           "product": "iPhone 8",
@@ -139,7 +139,7 @@ layout: exam1
     };
 
     // Use the Plugin
-    var itemList = new ItemList(items);
+    var itemList = new ItemList(resource);
     itemList.render('.js-content');
 
   }); // End $(document).ready
