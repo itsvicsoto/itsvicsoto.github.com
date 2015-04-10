@@ -10,13 +10,13 @@ layout: exam1
 
 <script type="text/javascript">
 
-  function Phones(phones) {
+  function ItemList(phones) {
     // get the node for phones.
     this.items = phones.items;
     this.currency = '$';
   }
 
-  Phones.prototype = function () {
+  ItemList.prototype = function () {
 
     // ####TEMPLATE
     // <li class="list__item">
@@ -106,7 +106,7 @@ layout: exam1
   $(document).ready(function() {
 
     // Initialise Data
-    var phonesData = {
+    var items = {
       "items": {
         "phones": [{
           "product": "iPhone 8",
@@ -139,8 +139,8 @@ layout: exam1
     };
 
     // Use the Plugin
-    var phones = new Phones(phonesData);
-    phones.render('.js-content');
+    var itemList = new ItemList(items);
+    itemList.render('.js-content');
 
   }); // End $(document).ready
 
