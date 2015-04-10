@@ -1,0 +1,63 @@
+---
+layout: volenday
+---
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-2.1.3.js"></script>
+
+
+<script type="text/javascript">
+
+
+function Person(h, w) {
+    this.height = h;
+    this.weight = w;
+}
+
+function CalcAvgHeight(data) {
+
+  var numberOfObj = 0;
+  var totalHeight = 0;
+
+  if(!data) return null;
+
+  for (var key in data) {
+
+    if (data.hasOwnProperty(key)) {
+        numberOfObj++;
+        var obj = data[key];
+
+      if(obj.height !== null && obj.height >= 0) {
+        totalHeight += obj.height;
+      }
+
+      console.log(obj);
+    }
+
+  }
+
+  return totalHeight/numberOfObj;
+}
+
+
+CalcAvgHeight({
+    Matt: {
+        height: 174,
+        weight: 69
+    },
+    Jason: {
+        height: 190,
+        weight: 103
+    }
+})
+
+</script>
+
+<ul>
+    <li>A</li>
+    <li>B</li>
+    <li>C</li>
+</ul>

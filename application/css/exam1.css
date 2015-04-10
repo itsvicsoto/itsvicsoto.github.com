@@ -1,0 +1,98 @@
+/*!!!!*
+ * SCSS file creating the exam1 to display phones
+ *
+ * This SCSS is written with inspiration from CSSINUIT and
+ * SMACSS & BEM.
+ */
+/*------------------------------------*\
+    GLOBAL VARIABLES
+\*------------------------------------*/
+/*------------------------------------*\
+    BASE
+\*------------------------------------*/
+/* line 25, ../../source/itsvicssx/scss-inuitcss/exam1.scss */
+html, body {
+  margin: 0;
+  padding: 0 0 30px 0;
+  font-size: 16px;
+  font-family: 'Roboto', 'sans serif', 'arial';
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased; }
+
+/* line 34, ../../source/itsvicssx/scss-inuitcss/exam1.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 200; }
+
+/* line 39, ../../source/itsvicssx/scss-inuitcss/exam1.scss */
+.btn, .btn-primary, .list__button {
+  padding: 8px 15px;
+  font-size: 100%;
+  color: white;
+  font-weight: 300;
+  border-radius: 4px;
+  border: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+
+/* line 49, ../../source/itsvicssx/scss-inuitcss/exam1.scss */
+.btn-primary, .list__button {
+  background: #534a93; }
+  /* line 53, ../../source/itsvicssx/scss-inuitcss/exam1.scss */
+  .btn-primary:hover, .list__button:hover {
+    background: #79589f; }
+
+/*------------------------------------*\
+    LAYOUT #HEADER
+\*------------------------------------*/
+/* line 66, ../../source/itsvicssx/scss-inuitcss/exam1.scss */
+.header {
+  padding: 20px;
+  text-align: center;
+  background-color: #79589f;
+  color: white; }
+
+/*------------------------------------*\
+    LAYOUT #CONTENT
+\*------------------------------------*/
+/* line 79, ../../source/itsvicssx/scss-inuitcss/exam1.scss */
+.content {
+  padding: 0 20px;
+  text-align: center; }
+
+/*------------------------------------*\
+    LAYOUT #FOOTER
+\*------------------------------------*/
+/* line 90, ../../source/itsvicssx/scss-inuitcss/exam1.scss */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+  text-align: center;
+  background-color: #79589f;
+  color: white; }
+
+/*------------------------------------*\
+    UI-COMPONENT #list
+\*------------------------------------*/
+/* line 107, ../../source/itsvicssx/scss-inuitcss/exam1.scss */
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+/* line 113, ../../source/itsvicssx/scss-inuitcss/exam1.scss */
+.list__item {
+  padding: 0 0 10px 0;
+  border: 1px solid #79589f;
+  border-radius: 5px;
+  margin-bottom: 20px; }
+
+/* line 120, ../../source/itsvicssx/scss-inuitcss/exam1.scss */
+.list__title {
+  padding: 10px;
+  background: #534a93;
+  color: white; }
