@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>HTML5 Voidberg</title>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:900,500,900italic,400italic,100,700italic,300,700,500italic,100italic,300italic,400'
+  rel='stylesheet' type='text/css'>
+
+  <style type="text/css">
+  header,
+  section {
+    display: block;
+  }
+  #features {
+    margin: auto;
+    width: 460px;
+    font-size: 0.9em;
+  }
+  .connected,
+  .sortable,
+  .exclude,
+  .handles {
+    margin: auto;
+    padding: 0;
+    width: 310px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .sortable.grid {
+    overflow: hidden;
+  }
+  .connected li,
+  .sortable li,
+  .exclude li,
+  .handles li {
+    list-style: none;
+    border: 1px solid #CCC;
+    background: #F6F6F6;
+    font-family: "Tahoma";
+    color: #1C94C4;
+    margin: 5px;
+    padding: 5px;
+    height: 22px;
+  }
+  .handles span {
+    cursor: move;
+  }
+  li.disabled {
+    opacity: 0.5;
+  }
+  .sortable.grid li {
+    line-height: 80px;
+    float: left;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+  }
+  li.highlight {
+    background: #FEE25F;
+  }
+  #connected {
+    width: 440px;
+    overflow: hidden;
+    margin: auto;
+  }
+  .connected {
+    float: left;
+    width: 200px;
+  }
+  .connected.no2 {
+    float: right;
+  }
+  li.sortable-placeholder {
+    border: 1px dashed #CCC;
+    background: none;
+  }
+  </style>
+</head>
+
+<body style="font-family: 'Roboto', arial; ">
+
+  <div style="margin: 0 auto; width: 960px;">
+
+    <h1>HTML5 Sortable Voidberg</h1>
+
+
+    <h2>Connected Sortable Lists</h2>
+    <div id="connected">
+      <ul class="connected list no2">
+        <li class="highlight">Item 1</li>
+        <li class="highlight">Item 2</li>
+        <li class="highlight">Item 3</li>
+        <li class="highlight">Item 4</li>
+        <li class="highlight">Item 5</li>
+        <li class="highlight">Item 6</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  <script type="text/javascript" src="/js/html5-sortable-voidberg.js"></script>
+  <script type="text/javascript" src="/js/html5-sortable-angular.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Your awesome title</title>
+  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:900,500,900italic,400italic,100,700italic,300,700,500italic,100italic,300italic,400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="canonical" href="http://yourdomain.com/cheatsheets/javascript/">
+  <link rel="alternate" type="application/rss+xml" title="Your awesome title" href="http://yourdomain.com/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="page-header page-header__masthead">
+  <div class="wrapper">
+    <nav class="page-nav">
+      <a class="page-nav__logo" href="/">itsvicsoto.com</a>
+      <ul class="page-nav__linklist nav" style="float:right;">
+        <li><a class="page-nav__linkitem" href=#>About</a>
+        </li>
+        <li><a class="page-nav__linkitem" href=#>Blog</a>
+        </li>
+        <li><a class="page-nav__linkitem" href=#>Work</a>
+        </li>
+        <li><a class="page-nav__linkitem" href=#>Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="page-header__centerfold">
+      <div class="page-header__centerfold-inner">
+        <h1>
+          <span style="
+    color: rgb(255, 82, 137);
+    background: #fff;
+    padding: 0 5px;
+    /* margin: 0; */
+">&lt;front-end/&gt;</span>
+          <span>web developer</span>
+
+        </h1>
+        <p class="page-header__centerfold__shortdesc">Hi! I am Victor Soto from Philippines! I craft websites with <span class="hs-color-love">love</span>.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="wrapper">
+    <p>https://github.com/stevekwan/best-practices/blob/master/javascript/best-practices.md<br />
+http://james.padolsey.com/javascript/js-adolescence/<br />
+http://ejohn.org/apps/learn/</p>
+
+<h1 id="javascript-shorthand-coding-techniques">Javascript Shorthand Coding Techniques</h1>
+
+<blockquote>
+  <p>My (@pongstr) opinion about shorthand coding techniques</p>
+
+  <p>Shorthand code is not really a replacement for normal coding<br />
+but it is very handy and useful in some cases. There are tons<br />
+of opinions and debates around this but, again it all comes down<br />
+what is necessary for your codebase and using it responsibly.</p>
+</blockquote>
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ol>
+  <li><a href="#if-true--else-shorthand">If true … else Shorthand</a></li>
+  <li><a href="#null-undefined-empty-checks-shorthand">Null, Undefined, Empty Checks Shorthand</a></li>
+  <li><a href="#object-array-notation-shorthand">Object Array Notation Shorthand</a></li>
+  <li><a href="#associative-array-notation-shorthand">Associative Array Notation Shorthand</a></li>
+  <li><a href="#declaring-variables-shorthand">Declaring variables Shorthand</a></li>
+  <li><a href="#assignment-operators-shorthand">Assignment Operators Shorthand</a></li>
+  <li><a href="#regexp-object-shorthand">RegExp Object Shorthand</a></li>
+  <li><a href="#if-presence-shorthand">If Presence Shorthand</a></li>
+  <li><a href="#function-variable-arguments-shorthand">Function Variable Arguments Shorthand</a></li>
+  <li><a href="#javascript-foreach-loop-shorthand">JavaScript foreach Loop Shorthand</a></li>
+  <li><a href="#chartat-shorthand">CharAt Shorthand</a></li>
+  <li><a href="#comparison-returns">Comparison Returns</a></li>
+  <li><a href="#short-function-calling">Short Function Calling</a></li>
+  <li><a href="#switch-nightmare">Switch Nightmare</a></li>
+  <li><a href="#decimal-base-exponents">Decimal base exponents</a></li>
+  <li><a href="#short-if---z">Short IF’z</a></li>
+  <li><a href="#lookup-tables-shorthand">Lookup Tables Shorthand</a></li>
+  <li><a href="#double-bitwise">Double Bitwise</a></li>
+  <li><a href="#suggest-one">Suggest One?</a></li>
+</ol>
+
+<h3 id="if-true--else-shorthand">If true … else Shorthand</h3>
+
+<p>This is a great code saver for when you want to do something if the test is true,<br />
+else do something else by using the ternary operator.</p>
+
+<pre><code class="language-javascript">// Longhand
+var big;
+
+if (x &gt; 10) {
+  big = true;
+} else {
+  big = false;
+}
+
+// Shorthand
+var big = (x &gt; 10) ? true : false;
+</code></pre>
+
+<p>If you rely on some of the weak typing characteristics of JavaScript, this can<br />
+also achieve more concise code. For example, you could reduce the preceding code<br />
+fragment to this:</p>
+
+<pre><code class="language-javascript">var big = (x &gt; 10);
+
+//further nested examples
+var x = 3,
+big = (x &gt; 10) ? 'greater 10' : (x &lt; 5) ? 'less 5' : 'between 5 and 10';
+
+console.log(big); // "less 5"
+
+var x = 20,
+big = { true: x &gt; 10, false : x&lt; =10 };
+
+console.log(big); // "Object {true=true, false=false}"
+</code></pre>
+
+<p><a href="#table-of-contents">↑ Back to top</a></p>
+
+<hr />
+
+<h3 id="null-undefined-empty-checks-shorthand">Null, Undefined, Empty Checks Shorthand</h3>
+
+<p>When creating new variables sometimes you want to check if the variable your<br />
+referencing for it’s value isn’t null or undefined. I would say this is a very<br />
+common check for JavaScript coders.</p>
+
+<pre><code class="language-javascript">// Longhand
+if (variable1 !== null || variable1 !== undefined || variable1 !== '') {
+  var variable2 = variable1;
+}
+
+// Shorthand
+var variable2 = variable1  || '';
+
+// Browser Test:
+//null value example
+var variable1 = null,
+variable2 = variable1  || '';
+
+console.log(variable2); // output: '' (an empty string)
+
+//undefined value example
+var variable1 = undefined,
+variable2 = variable1  || '';
+
+console.log(variable2); // output: '' (an empty string)
+
+//normal value example
+var variable1 = 'hi there',
+variable2 = variable1  || '';
+
+console.log(variable2); // output: 'hi there'
+</code></pre>
+
+<p><a href="#table-of-contents">↑ Back to top</a></p>
+
+<hr />
+
+<h3 id="object-array-notation-shorthand">Object Array Notation Shorthand</h3>
+
+<p>Useful way of declaring small arrays on one line.</p>
+
+<pre><code class="language-javascript">// Longhand
+var a    = new Array();
+a[0] = 'myString1';
+a[1] = 'myString2';
+a[2] = 'myString3';
+
+// Shorthand
+var a = ['myString1', 'myString2', 'myString3'];
+</code></pre>
+
+<p><a href="#table-of-contents">↑ Back to top</a></p>
+
+<hr />
+
+<h3 id="associative-array-notation-shorthand">Associative Array Notation Shorthand</h3>
+
+<p>The old school way of setting up an array was to create a named array and then<br />
+add each named element one by one. A quicker and more readable way is to add<br />
+the elements at the same time using the object literal notation. Please note<br />
+that Associative Array are essentially JavaScript Objects with properties.</p>
+
+<pre><code class="language-javascript">// Longhand
+var skillSet = new Array();
+skillSet['Document language'] = 'HTML5';
+skillSet['Styling language'] = 'CSS3';
+skillSet['Javascript library'] = 'jQuery';
+skillSet['Other'] = 'Usability and accessibility';
+
+// Shorthand
+// Don’t forget to omit the final comma otherwise certain
+// browsers will complain (not naming any names, IE).
+var skillSet = {
+  'Document language': 'HTML5',
+  'Styling language': 'CSS3',
+  'Javascript library': 'jQuery',
+  'Other': 'Usability and accessibility'
+};
+</code></pre>
+
+<p><a href="#table-of-contents">↑ Back to top</a></p>
+
+<hr />
+
+<h3 id="declaring-variables-shorthand">Declaring variables Shorthand</h3>
+
+<p>It is sometimes good practice to including variable assignments at the beginning<br />
+of your functions. This shorthand method can save you lots of time and space<br />
+when declaring multiple variables at the same time.</p>
+
+<pre><code class="language-javascript">// Longhand
+var x;
+var y;
+var z = 3;
+
+// Shorthand
+var x, y, z = 3;
+
+// or
+var x,
+    y,
+    z = 3;
+</code></pre>
+
+<p><a href="#table-of-contents">↑ Back to top</a></p>
+
+<hr />
+
+<h3 id="assignment-operators-shorthand">Assignment Operators Shorthand</h3>
+
+<p>Assignment operators are used to assign values to JavaScript variables and no<br />
+doubt you use arithmetic everyday without thinking (no matter what programming<br />
+language you use Java, PHP, C++ it’s essentially the same principle).</p>
+
+<pre><code class="language-javascript">// Longhand
+x = x + 1;
+minusCount = minusCount - 1;
+y = y * 10;
+
+// Shorthand
+x++;
+minusCount --;
+y * = 10;
+</code></pre>
+
+<p><a href="#table-of-contents">↑ Back to top</a></p>
+
+<hr />
+
+<h3 id="regexp-object-shorthand">RegExp Object Shorthand</h3>
+
+<p>Example to avoid using the RegExp object.</p>
+
+<pre><code class="language-javascript">// Longhand
+var regex  = new RegExp('\d+(.)+\d+','igm'),
+    result = regex.exec('padding 01234 text text 56789 padding');
+
+    console.log(result); // '01234 text text 56789'
+
+// Shorthand
+var result = /d+(.)+d+/igm.exec('padding 01234 text text 56789 padding');
+
+  console.log(result); // '01234 text text 56789'
+</code></pre>
+
+<p><a href="#table-of-contents">↑ Back to top</a></p>
+
+<hr />
+
+<h3 id="if-presence-shorthand">If Presence Shorthand</h3>
+
+<p>This might be trivial, but worth a mention. When doing “if checks” assignment<br />
+operators can sometimes be ommited.</p>
+
+<pre><code class="language-javascript">// Longhand
+if (likeJavaScript === true)
+
+// Shorthand
+if (likeJavaScript)
+
+// Other Examples:
+// If 'a' is NOT equal to true, then do something.
+// Longhand
+var a;
+
+  if (a !== true) {
+    // do something...
+  }
+
+// Shorthand
+var a;
+
+  if (!a) {
+    // do something...
+  }
+</code></pre>
+
+<p><a href="#table-of-contents">↑ Back to top</a></p>
+
+<hr />
+
+<h3 id="function-variable-arguments-shorthand">Function Variable Arguments Shorthand</h3>
+
+<p>Object literal shorthand can take a little getting used to, but seasoned developers<br />
+usually prefer it over a series of nested functions and variables. You can argue<br />
+which technique is shorter, but I enjoy using object literal notation as a clean<br />
+substitute to functions as constructors.</p>
+
+<pre><code class="language-javascript">// Longhand
+function myFunction(myString, myNumber, myObject, myArray, myBoolean) {
+  // do something...
+}
+
+myFunction('String', 1, [], {}, true);
+
+// Shorthand
+
+function myFunction() {
+  for (i = 0; i &lt; arguments.length; i++) {
+    console.log( typeof arguments[i] ); // Returns string, number, object, object, boolean
+  }
+}
+
+myFunction('String', 1, [], {}, true);
+</code></pre>
+
+<p><a href="#table-of-contents">↑ Back to top</a></p>
+
+<hr />
+
+<h3 id="javascript-foreach-loop-shorthand">JavaScript foreach Loop Shorthand</h3>
+
+<p>This little tip is really useful if you want plain JavaScript and hence can’t<br />
+use jQuery <code>$.each</code> or <code>Array.forEach()</code>.</p>
+
+<pre><code class="language-javascript">// Longhand
+for (var i = 0; i &lt; allImgs.length; i++)
+
+// Shorthand
+for (var i in allImgs)
+
+// Shorthand for Array.forEach
+function logArrayElements(element, index, array) {
+  console.log('a[' + index + '] = ' + element);
+}
+
+[2, 5, 9].forEach(logArrayElements);
+// logs: a[0] = 2, a[1] = 5, a[2] = 9
+</code></pre>
+
+<h3 id="charat-shorthand">CharAt Shorthand</h3>
+
+<p>You can use the eval() function to do this but this bracket notation shorthand<br />
+technique is much cleaner than an evaluation, and you will win the praise of<br />
+colleagues who once scoffed at your amateur coding abilities!</p>
+
+<pre><code class="language-javascript">// Longhand
+'myString'.charAt(0);
+
+// Shorthand
+'myString'[0]; // returns 'm'
+</code></pre>
+
+<p><a href="#table-of-contents">↑ Back to top</a></p>
+
+<hr />
+
+<h3 id="comparison-returns">Comparison Returns</h3>
+
+<p>We’re no longer relying on the less reliable == as !(ret == undefined) could be<br />
+rewritten as !(ret) to take advantage of the fact that in an or expression,<br />
+ret (if undefined or false) will skip to the next condition and use it instead.<br />
+This allows us to trim down our 5 lines of code into fewer characters and it’s<br />
+once again, a lot more readable.</p>
+
+<pre><code class="language-javascript">// Longhand
+if (!(ret == undefined)) {
+ return ret;
+} else{
+ return fum('g2g');
+}
+
+// Shorthand
+return ret || fum('g2g');
+</code></pre>
+
+<p><a href="#table-of-contents">↑ Back to top</a></p>
+
+<hr />
+
+<h3 id="short-function-calling">Short Function Calling</h3>
+
+<p>Just like #1 you can use ternary operators to make function calling shorthand<br />
+based on a conditional.</p>
+
+<pre><code class="language-javascript">// Longhand
+function x () {
+  console.log('x');
+};
+
+function y () {
+  console.log('y');
+};
+
+var z = 3;
+if (z == 3) {
+  x();
+} else {
+  y();
+}
+
+// Shorthand
+(z === 3 ? x:y)();
+</code></pre>
+
+<p><a href="#table-of-contents">↑ Back to top</a></p>
+
+<hr />
+
+<h3 id="switch-nightmare">Switch Nightmare</h3>
+
+<p>Everyone loves switch statements, <em>cough</em>. Here is how you might avoid switch<br />
+case syndrome.</p>
+
+<pre><code class="language-javascript">// Longhand
+switch (something) {
+  case 1:
+    doX();
+  break;
+
+  case 2:
+    doY();
+  break;
+
+  case 3:
+    doN();
+  break;
+  // And so on...
+}
+
+// Shorthand
+var cases = {
+  1: doX,
+  2: doY,
+  3: doN
+};
+
+cases[something] &amp;&amp; cases[something]();
+</code></pre>
+
+<p><a href="#table-of-contents">↑ Back to top</a></p>
+
+<hr />
+
+<h3 id="decimal-base-exponents">Decimal base exponents</h3>
+
+<p>You may have seen this one around it’s essentially a fancy way to write without<br />
+the zeros. 1e7 essentially means 1 followed by 7 zeros – it represents a decimal<br />
+base (JS interprets as a float type) equal to 10,000,000.</p>
+
+<pre><code class="language-javascript">// Longhand
+for (var i = 0; i &lt; 10000; i++) { ... }
+
+// Shorthand
+for (var i = 0; i &lt; 1e7; i++) {
+</code></pre>
+
+<p>You can use 1 and 0 to represent true and false. I’ve seen this used in<br />
+JavaScript game development in shorthand while loops. Note that if you use the<br />
+negative start your array may be in reverse. You can also use <code>while(i++ &lt; 10)</code><br />
+and you don’t have to add the <code>i++</code> later on inside the while.</p>
+
+<pre><code class="language-javascript">// Longhand
+var i=0;
+while (i&amp;lt;9) {
+  //do stuff
+  i++; //say
+}
+
+// Shorthand
+var i=9;
+
+// goes until i=0
+while(i--) { ... }
+ 
+// or
+
+var i = -9;
+// goes until i=0
+while (i++) { ... }
+</code></pre>
+
+<p><a href="#table-of-contents">↑ Back to top</a></p>
+
+<hr />
+
+<h3 id="short-ifz">Short IF’z</h3>
+
+<p>If you have mutiple IF variable value comparisons you can simply ass them to<br />
+an array and check for presence. You could use $.inArray as an alternative.</p>
+
+<pre><code class="language-javascript">// Longhand
+if(myvar == 1 || myvar == 5 || myvar == 7 || myvar == 22)  {
+  console.log('ya');
+}
+
+// Shorthand
+([1,5,7,22].indexOf(myvar) !=- 1) &amp;&amp; alert('yeah baby!');
+</code></pre>
+
+<p><a href="#table-of-contents">↑ Back to top</a></p>
+
+<hr />
+
+<h3 id="lookup-tables-shorthand">Lookup Tables Shorthand</h3>
+
+<p>If you have code that behaves differently based on the value of a property, it<br />
+can often result in conditional statements with multiple else ifs or a switch<br />
+cases. You may prefer to use a lookup table if there is more than two options<br />
+(even a switch statement looks ugly!).</p>
+
+<pre><code class="language-javascript">// Longhand
+if (type === 'aligator') {
+  aligatorBehavior();
+}
+else if (type === 'parrot') {
+  parrotBehavior();
+}
+else if (type === 'dolphin') {
+  dolphinBehavior();
+}
+else if (type === 'bulldog') {
+  bulldogBehavior();
+} else {
+  throw new Error('Invalid animal ' + type);
+}
+
+// Shorthand
+var types = {
+  aligator: aligatorBehavior,
+  parrot: parrotBehavior,
+  dolphin: dolphinBehavior,
+  bulldog: bulldogBehavior
+};
+ 
+var func = types[type];
+(!func) &amp;&amp; throw new Error('Invalid animal ' + type); func();
+</code></pre>
+
+<p><a href="#table-of-contents">↑ Back to top</a></p>
+
+<hr />
+
+<h3 id="double-bitwise">Double Bitwise</h3>
+
+<p>The double bitwise trick provides us with some pretty nifty shorthand tricks.<br />
+Read more about it here: <a href="http://james.padolsey.com/javascript/double-bitwise-not/">Double bitwise NOT (~~)</a>.</p>
+
+<pre><code class="language-javascript">// Longhand
+Math.floor(4.9) === 4  // true
+
+// Shorthand
+~~4.9 === 4  // true
+</code></pre>
+
+<h3 id="suggest-one">Suggest one?</h3>
+
+<p>Suggest a JS coding technique maybe? Please add to the comments</p>
+
+<ul>
+  <li>Code examples (longhand and shorthand)</li>
+  <li>Little description when it’s useful, cautions and stuff like that</li>
+  <li>Link (if you got it from a website and author)</li>
+</ul>
+
+<p>Thanks!</p>
+
+</div>
+
+    </div>
+
+    <footer class="page-footer">
+  <div class="wrapper text--center">
+    <span>Designed and developed by itsvicsoto.com</span>
+  </div>
+</footer>
+
+<!-- <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Your awesome title</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Your awesome title</li>
+          <li><a href="mailto:your-email@domain.com">your-email@domain.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/jekyll">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">jekyll</span>
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/jekyllrb">
+              <span class="icon  icon--twitter">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+                </svg>
+              </span>
+
+              <span class="username">jekyllrb</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+ -->
+
+
+  </body>
+
+</html>

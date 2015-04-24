@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Your awesome title</title>
+    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</description>
+    <link>http://yourdomain.com/</link>
+    <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 24 Apr 2015 10:55:58 +0800</pubDate>
+    <lastBuildDate>Fri, 24 Apr 2015 10:55:58 +0800</lastBuildDate>
+    <generator>Jekyll v1.4.3</generator>
+    
+      <item>
+        <title>Installation Guide</title>
+        <description>&lt;h3 id=&quot;welcome-to-my-website&quot;&gt;Welcome to my website!&lt;/h3&gt;
+
+&lt;p&gt;I built this website to serve as my personal playground for developing my front-end skills.&lt;br /&gt;
+This will also serve as my blog and repository for all the notes/cheatsheets I do during my development.&lt;br /&gt;
+I will be constantly keep this up to date for myself and for all who wanted to contribute to my docs. Have fun! If it’s good enough to be a reference I totally approve of it!&lt;/p&gt;
+
+&lt;h3 id=&quot;stacks&quot;&gt;stacks&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;NodeJS&lt;/li&gt;
+  &lt;li&gt;Jekyll&lt;/li&gt;
+  &lt;li&gt;SASS&lt;/li&gt;
+  &lt;li&gt;submodule - https://github.com/itsvicsoto/itsvicss using inuitcss by harry roberts&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;getting-started&quot;&gt;Getting Started&lt;/h3&gt;
+
+&lt;p&gt;I built this to run on NodeJS (when i decided to move it out of git pages) but for now everything is compiled in jekyll and run on NodeJS. Compass is used to compile css.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;git clone git@github.com:itsvicsoto/itsvicsoto.github.com.git &lt;strong&gt;your-directory-name&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;cd &lt;strong&gt;your-directory-name&lt;/strong&gt; (by default your branch is gonna be development)&lt;/li&gt;
+  &lt;li&gt;git submodule init&lt;/li&gt;
+  &lt;li&gt;git submodule update&lt;/li&gt;
+  &lt;li&gt;npm start (start reading the compiled jekyll)&lt;/li&gt;
+  &lt;li&gt;cd application&lt;/li&gt;
+  &lt;li&gt;jekyll build –watch&lt;/li&gt;
+  &lt;li&gt;cd &lt;strong&gt;your-directory-name&lt;/strong&gt;/source/itsvicssx&lt;/li&gt;
+  &lt;li&gt;compass watch&lt;/li&gt;
+  &lt;li&gt;do not forget to access localhost:5005&lt;/li&gt;
+  &lt;li&gt;change settings as you like&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;inspiration&quot;&gt;Inspiration&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;CSSWizardry&lt;/li&gt;
+  &lt;li&gt;SMACSS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 10 Jan 2015 00:00:00 -0000</pubDate>
+        <link>http://yourdomain.com/articles/2015/01/10/installation-guide/</link>
+        <guid isPermaLink="true">http://yourdomain.com/articles/2015/01/10/installation-guide/</guid>
+        
+        
+        <category>articles</category>
+        
+      </item>
+    
+      <item>
+        <title>Html5 Drag and Drop</title>
+        <description>&lt;h3 id=&quot;html5-drag-and-drop&quot;&gt;Html5 Drag and drop&lt;/h3&gt;
+
+&lt;p&gt;Just because I had to build this one and it’s frustrating with jQuery UI when&lt;br /&gt;
+dealing with iFrame.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/html5-dnd.html&quot;&gt;Click here to see Demo&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/html5-voidberg.html&quot;&gt;Click here to see Demo Voidberg&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/html5-voidberg-angular.html&quot;&gt;Click here to see Demo Voidberg - Angular&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/html5-ng-rubaxa.html&quot;&gt;Click here to see Demo Rubaxa - Angular&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Sat, 10 Jan 2015 00:00:00 -0000</pubDate>
+        <link>http://yourdomain.com/case-study-projects/2015/01/10/dragndrop/</link>
+        <guid isPermaLink="true">http://yourdomain.com/case-study-projects/2015/01/10/dragndrop/</guid>
+        
+        
+        <category>case-study-projects</category>
+        
+      </item>
+    
+      <item>
+        <title>Cheatsheets Collection</title>
+        <description>&lt;h3 id=&quot;welcome-to-my-hackerrrry-page&quot;&gt;Welcome to my hackerrrry page!&lt;/h3&gt;
+
+&lt;p&gt;I try to compile as much information as I can while developing for future&lt;br /&gt;
+reference. Docs might be dirty but I’ll keep everything as neat as possible.&lt;br /&gt;
+This includes best practices ranging from front-end framework, javascript&lt;br /&gt;
+snippets, css or even random stuff I just want to note.&lt;/p&gt;
+
+&lt;p&gt;Some of them are listed here :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/cheatsheets/inspiration&quot;&gt;Inspiration&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/cheatsheets/angular&quot;&gt;Angular&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/cheatsheets/jquery&quot;&gt;JQuery&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/cheatsheets/whatever-nix&quot;&gt;whatever-nix&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/cheatsheets/wordpress&quot;&gt;wordpress&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/cheatsheets/osx-developer-setup&quot;&gt;OSX Developer Setup&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Sat, 10 Jan 2015 00:00:00 -0000</pubDate>
+        <link>http://yourdomain.com/case-study-projects/2015/01/10/cheatsheets/</link>
+        <guid isPermaLink="true">http://yourdomain.com/case-study-projects/2015/01/10/cheatsheets/</guid>
+        
+        
+        <category>case-study-projects</category>
+        
+      </item>
+    
+  </channel>
+</rss>

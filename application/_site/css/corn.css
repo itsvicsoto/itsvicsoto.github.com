@@ -1,0 +1,79 @@
+/* line 3, ../../source/itsvicssx/scss-inuitcss/corn.scss */
+.corn h1, .corn h2, .corn h3, .corn h4, .corn h5 {
+  font-family: 'Arvo', serif; }
+/* line 7, ../../source/itsvicssx/scss-inuitcss/corn.scss */
+.corn .masthead {
+  position: relative;
+  height: 400px;
+  background: url(/images/corn.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: 0px -400px; }
+  /* line 17, ../../source/itsvicssx/scss-inuitcss/corn.scss */
+  .corn .masthead .inner {
+    padding-top: 150px; }
+    /* line 20, ../../source/itsvicssx/scss-inuitcss/corn.scss */
+    .corn .masthead .inner h1 {
+      display: inline-block;
+      padding: 5px 10px;
+      background: #323232;
+      color: #ffd500; }
+    /* line 27, ../../source/itsvicssx/scss-inuitcss/corn.scss */
+    .corn .masthead .inner p {
+      color: #000000;
+      padding: 5px 10px; }
+/* line 35, ../../source/itsvicssx/scss-inuitcss/corn.scss */
+.corn .navigation {
+  position: absolute;
+  bottom: 0;
+  left: 39%; }
+/* line 41, ../../source/itsvicssx/scss-inuitcss/corn.scss */
+.corn .navigation-list {
+  margin: 0; }
+  /* line 44, ../../source/itsvicssx/scss-inuitcss/corn.scss */
+  .corn .navigation-list li {
+    background: #ffd500;
+    padding: 10px 20px;
+    color: #383838;
+    font-weight: bold;
+    position: relative;
+    width: 134px;
+    text-align: center; }
+    /* line 53, ../../source/itsvicssx/scss-inuitcss/corn.scss */
+    .corn .navigation-list li:after {
+      content: '';
+      position: absolute;
+      bottom: -7px;
+      left: 45%;
+      background: #ffd500;
+      border-radius: 40px;
+      width: 20px;
+      height: 20px; }
+    /* line 64, ../../source/itsvicssx/scss-inuitcss/corn.scss */
+    .corn .navigation-list li.active {
+      background: #FFEC29; }
+      /* line 67, ../../source/itsvicssx/scss-inuitcss/corn.scss */
+      .corn .navigation-list li.active:after {
+        background: #FFEC29; }
+/* line 76, ../../source/itsvicssx/scss-inuitcss/corn.scss */
+.corn .content--header {
+  border-bottom: 1px solid #e5e5e5;
+  width: 500px;
+  margin: 10px auto 20px auto; }
+  /* line 81, ../../source/itsvicssx/scss-inuitcss/corn.scss */
+  .corn .content--header h2 {
+    margin: 0;
+    padding: 10px;
+    text-align: center; }
+/* line 88, ../../source/itsvicssx/scss-inuitcss/corn.scss */
+.corn .content--message {
+  width: 500px;
+  text-align: center;
+  margin: auto; }
+/* line 94, ../../source/itsvicssx/scss-inuitcss/corn.scss */
+.corn .footer {
+  padding: 5px;
+  background-color: #ffd500;
+  text-align: center; }

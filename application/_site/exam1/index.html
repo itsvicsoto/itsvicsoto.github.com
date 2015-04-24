@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="/css/exam1.css">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:900,500,900italic,400italic,100,700italic,300,700,500italic,100italic,300italic,400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="header">BETICA SHOP</div>
+<div class="content">
+  <div class="[ js-content ]"></div>
+</div>
+<div class="footer">COPYRIGHT 2014</div>
+
+<script type="text/javascript">
+
+  function ItemList(resource) {
+    // get item nodes
+    this.items = resource.items;
+    this.currency = '$';
+  }
+
+  ItemList.prototype = function () {
+
+    // ####TEMPLATE
+    // <li class="list__item">
+    //   <div class="list__title">
+    //     <a class="list__title-link">
+    //       iPhone 8
+    //     </a>
+    //   </div>
+    //   <p class="list__description">
+    //     Manufactured by <strong>Apple</strong>, to be
+    //     released in <strong>2015</strong>
+    //   </p>
+    //   <button type="button" class="list__button">
+    //     <span class="list__price">$1,000</span>
+    //   </button>
+    // </li>
+    function drawItem(itemList, options) {
+      var itemHtml = '';
+
+
+      itemList.forEach(function(element, index, array) {
+
+        itemHtml += ['<li class="list__item">',
+                      '<div class="list__title">',
+                        '<a class="list__title-link">',
+                          element.product,
+                        '</a>',
+                      '</div>',
+                      '<p class="list__description"',
+                        'Manufactured by <strong>' + element.manufacturer,
+                        ' to be released in <strong>' + element.releaseDate,
+                        '</strong>',
+                      '</p>',
+                      '<button type="button" class="list__button">',
+                        '<span class="list__price">' + options.currency,
+                        + ' ' + element.price + '</span>',
+                      '</button>',
+                    '</li>'].join('');
+
+      })
+
+      return itemHtml;
+
+    }
+
+    // ####TEMPLATE
+    // <ul class="list">
+    //   // drawPhoneItem()
+    // </ul>
+    function drawList(items, options) {
+        var listHtml = '';
+        var itemsHtml = '';
+
+        $.each(items, function (key, itemList) {
+          itemsHtml += drawItem(itemList, options);
+
+          listHtml += ['<h1 class="uppercase">' + key + '</h1>',
+                       '<ul class="list">',
+                        itemsHtml,
+                       '</ul>'].join('');
+        })
+
+        return listHtml;
+
+    }
+
+    return {
+      /**
+       * [render this will render html results inside the selector]
+       * @param  {[String]} selector [Class or Id of an element]
+       * @return {[null]}
+       */
+      render: function(selector) {
+        var items = this.items;
+        var options = {
+          currency : this.currency
+        }
+
+        $(selector).html(drawList(items, options));
+      }
+    }
+
+  }();
+
+
+  // render the items in the info using jQuery
+  $(document).ready(function() {
+
+    // Initialise Data
+    var resource = {
+      "items": {
+        "phones": [{
+          "product": "iPhone 8",
+          "manufacturer": "Apple",
+          "releaseDate": "2018",
+          "price": 35000
+        }, {
+          "product": "Galaxy S9",
+          "manufacturer": "Samsung",
+          "releaseDate": "2018",
+          "price": 33000
+        }, {
+          "product": "Xperia ZZ",
+          "manufacturer": "Sony",
+          "releaseDate": "2020",
+          "price": 35000
+        }],
+        "laptop": [{
+          "product": "MacBook PRO 2018",
+          "manufacturer": "Apple",
+          "releaseDate": "2017",
+          "price": 75000
+        }, {
+          "product": "Vaio",
+          "manufacturer": "Sony",
+          "releaseDate": "2020",
+          "price": 73000
+        }]
+      }
+    };
+
+    // Use the Plugin
+    var itemList = new ItemList(resource);
+    itemList.render('.js-content');
+
+  }); // End $(document).ready
+
+</script>
+
+  </div>
+</body>
+
+</html>
